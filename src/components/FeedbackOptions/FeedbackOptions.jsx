@@ -11,7 +11,9 @@ class FeedbackOptions extends Component {
               className={css.btn}
               key={elem}
               id={elem}
-              onClick={this.props.vote}
+              onClick={() => {
+                this.props.vote(elem);
+              }}
             >
               <span className={css.buttonText}>{elem}</span>
             </button>
